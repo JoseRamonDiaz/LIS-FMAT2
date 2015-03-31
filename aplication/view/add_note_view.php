@@ -22,13 +22,16 @@ include 'aplication/config/config.php';
     <!-- InstanceBeginEditable name="EditRegion" -->
     <h2>Llena los datos del material</h2>
             <p>
-                <form action=<?php echo 'http://'.$config['base_url'].'/CHello/add_note_controller'; ?> method="post" enctype="multipart/form-data">
+                <form action=<?php echo 'http://'.$config['base_url'].'/note/addNote'; ?> method="post" enctype="multipart/form-data">
                 <input type="radio" name="tipo" value="tarea">Tarea</input>
                 <input type="radio" name="tipo" value="examen">Examen</input>
                 <?php
                 
                 //echo "<input type='text' value='$idMaestro' name='idMaestro' hidden/>";
                 //echo "<input type='text' value='$idMateria' name='idMateria' hidden/>";
+                
+                echo "<input type='text' value='1' name='idMaestro' hidden/>";
+                echo "<input type='text' value='1' name='idMateria' hidden/>";
                 ?>
                 <label for="nombre">Nombre: </label>
                 <input type="text" name="nombre" id="nombre"></input>

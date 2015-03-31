@@ -49,15 +49,29 @@ class note extends core_controller {
             
             $this->load_model('mnote');
             $this->mnote->addNote($nombre, $url, $descripcion, $tipoBool, $idMaestro, $idMateria);
-            echo "Guardado exitoso";
+            $this->loadSuccessView();
         } else {
-            echo "Eror al guardar";
+            $this->loadFailView();
         }
     }
 
     function addNoteView(){
         $data = array();
         $content = $this->load_view('add_note_view', $data, true);
+        $dataTemplate['content'] = $content;
+        $this->load_view('template', $dataTemplate);
+    }
+    
+    function loadSuccessView(){
+        $data = array();
+        $content = $this->load_view('success_view', $data, true);
+        $dataTemplate['content'] = $content;
+        $this->load_view('template', $dataTemplate);
+    }
+    
+    function loadFailView(){
+        $data = array();
+        $content = $this->load_view('fail_view', $data, true);
         $dataTemplate['content'] = $content;
         $this->load_view('template', $dataTemplate);
     }

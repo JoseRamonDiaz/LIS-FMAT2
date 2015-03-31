@@ -20,16 +20,16 @@ class teacher extends core_controller{
     }
     
     function insertTeacher(){
-        if(isset($_POST['nombre']) && isset($_POST['apellidos'])){
+        if(isset($_POST['nombre']) && isset($_POST['apellidos']) && $_POST['nombre'] != ""){
             $nombre = $_POST['nombre'];
             $apellidos = $_POST['apellidos'];
             $this->load_model('mteacher');
             $this->mteacher->insertTeacher($nombre, $apellidos);
             //Aqui debe llamar a la vista de guardado exitoso
-            echo "Guardao exitoso";
+            $this->loadSuccessView();
         }else{
            //aqui debe llamar a la vista de fallo al guardar
-            echo "fallo al guardar";
+            $this->loadFailView();
         }
     }
     
@@ -37,6 +37,20 @@ class teacher extends core_controller{
         $data = array();
         $content = $this->load_view('add_teacher_view',$data, true);
         $dataTemplate = array();
+        $dataTemplate['content'] = $content;
+        $this->load_view('template', $dataTemplate);
+    }
+    
+    function loadSuccessView(){
+        $data = array();
+        $content = $this->load_view('success_view', $data, true);
+        $dataTemplate['content'] = $content;
+        $this->load_view('template', $dataTemplate);
+    }
+    
+    function loadFailView(){
+        $data = array();
+        $content = $this->load_view('fail_view', $data, true);
         $dataTemplate['content'] = $content;
         $this->load_view('template', $dataTemplate);
     }

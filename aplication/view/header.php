@@ -1,3 +1,7 @@
+<?php
+include 'aplication/config/config.php';
+?>
+
 <div id="logo">
 			<h1><a href="index.php" title="LIS FMAT">LIS FMAT</a></h1>
 			<p>Un espacio para compartir apuntes e información 
@@ -11,7 +15,7 @@
 			<li>
                 <?php if (isset($_SESSION['login_username']) && $_SESSION['login_username']!=''): ?>
 
-                       <a href="controller/logout.php" >Cerrar Sesión</a>
+                       <a href=<?php echo 'http://'.$config['base_url'].'/user_controller/logout'; ?>>Cerrar Sesión</a>
                        
                 <?php else: ?>
 

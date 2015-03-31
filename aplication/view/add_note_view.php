@@ -7,7 +7,7 @@ include 'aplication/config/config.php';
     <meta charset="utf-8"/>
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Untitled Document</title>
-<link rel="stylesheet" href="public/css/main.css" type="text/css" />
+<link rel="stylesheet" href="/LIS-FMAT2/public/css/main.css" type="text/css" />
 	<title>LIS FMAT</title>
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->

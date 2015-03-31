@@ -19,5 +19,10 @@ class teacher extends core_controller{
         }
     }
     
-    
+    function insertTeacher(){
+        if(isset($_POST['nombre']) && isset($_POST['apellidos'])){
+            $nombre = $_POST['nombre'];
+            $apellidos = $_POST['apellidos'];
+        }
+    }
 }

@@ -15,10 +15,10 @@ class mteacher extends core_model{
         return $this->db->get('maestro');
     }
     
-    function insertTeacher(){
+    function insertTeacher($name, $lastName){
         $data = array();
-        $data['NombreMaestro'] = "Pedro";
-        $data['ApellidosMaestro'] = "Juanes";
+        $data['NombreMaestro'] = $name;
+        $data['ApellidosMaestro'] = $lastName;
         $this->db->insert('maestro', $data);
     }
 }

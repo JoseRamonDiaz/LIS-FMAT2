@@ -43,5 +43,5 @@ Temporary Items
 .apdisk
 system/database/concreteConnections/mysqlconnection.php
 /nbproject/private/
-#aplication/controller/CHello.php
+aplication/controller/CHello.php
 archivos/*

@@ -4,7 +4,7 @@
 	app_name de manera opcional se describe el nombre de su aplicacion web, 
 	puede poner el nombre del directorio donde esta instalado el framework
 	*/
-	$config['app_name'] 			= 'mvc';
+	$config['app_name'] 			= 'LIS-FMAT2';
 
 	/* 
 	usted puede cambiar de nombre el directorio donde se aloja su aplicacion (directorio: aplication)

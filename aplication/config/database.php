@@ -7,4 +7,4 @@
 	$database['dbhostname'] = "localhost";			//el host de la base de datos
 	$database['dbusername'] = "root";				//nombre de usuario
 	$database['password'] 	= "";					//contrasena
-	$database['dbname']		= "mvc";				//base de datos
+	$database['dbname']		= "mydb";				//base de datos

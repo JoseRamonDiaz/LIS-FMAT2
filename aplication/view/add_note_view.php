@@ -1,26 +1,8 @@
 <?php
 include 'aplication/config/config.php';
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Untitled Document</title>
-<link rel="stylesheet" href="/LIS-FMAT2/public/css/main.css" type="text/css" />
-	<title>LIS FMAT</title>
-<!-- InstanceEndEditable -->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-</head>
 
-<body>
-<div class="wrap">
-		<?php //include('header.php'); ?>
-    <div class="wrap">
-		<div id="left">
-    <!-- InstanceBeginEditable name="EditRegion" -->
-    <h2>Llena los datos del material</h2>
+<h2>Llena los datos del material</h2>
             <p>
                 <form action=<?php echo 'http://'.$config['base_url'].'/note/addNote'; ?> method="post" enctype="multipart/form-data">
                 <input type="radio" name="tipo" value="tarea">Tarea</input>

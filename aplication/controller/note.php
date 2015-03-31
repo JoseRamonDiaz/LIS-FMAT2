@@ -56,6 +56,9 @@ class note extends core_controller {
     }
 
     function addNoteView(){
-        $this->load_view('add_note_view');
+        $data = array();
+        $content = $this->load_view('add_note_view', $data, true);
+        $dataTemplate['content'] = $content;
+        $this->load_view('template', $dataTemplate);
     }
 }

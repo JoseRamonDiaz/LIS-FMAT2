@@ -34,6 +34,10 @@ class teacher extends core_controller{
     }
     
     function insertTeacherView(){
-        $this->load_view('add_teacher_view');
+        $data = array();
+        $content = $this->load_view('add_teacher_view',$data, true);
+        $dataTemplate = array();
+        $dataTemplate['content'] = $content;
+        $this->load_view('template', $dataTemplate);
     }
 }

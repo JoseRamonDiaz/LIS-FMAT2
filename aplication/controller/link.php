@@ -1,45 +1,34 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-class user_controller extends core_controller{
+class link extends core_controller {
+
     function __construct() {
         parent::__construct();
     }
-    
-    function loginView(){
-            $data = array();
-            $content = $this->load_view('session_start_view', $data, TRUE);
-            $dataTemplate['content'] = $content;
-            $this->load_view('template', $dataTemplate);
-    }
-    
-    function login(){
-        $this->load_model('muser');
-        if($this->muser->login($_POST['user'], $_POST['pass']))
+
+    function addLink(){
+        if(isset($_POST['enlace'])){
+            $enlace = $_POST['enlace'];
+            $Materia_idMateria = $_POST["Materia_idMateria"];
+            $this->load_model('mlink');
+            $this->mlink->addLink($enlace, $Materia_idMateria);
+            //Aqui debe llamar a la vista de guardado exitoso
             $this->loadSuccessView();
-        else
-            $this->loadFailView ();
-    }
-    
-    function logout(){
-        $this->load_model('muser');
-        if($this->muser->logout()){
-            header("Location: http://localhost/LIS-FMAT2/user_controller/loginview");
-        }
-        else {
+        }else{
+           //aqui debe llamar a la vista de fallo al guardar
             $this->loadFailView();
         }
     }
 
-    function registerUserView(){
+    function addLinkView(){
         $data = array();
-        $content = $this->load_view('register_user_view',$data, true);
-        $dataTemplate = array();
+        $content = $this->load_view('add_link_view', $data, true);
         $dataTemplate['content'] = $content;
         $this->load_view('template', $dataTemplate);
     }

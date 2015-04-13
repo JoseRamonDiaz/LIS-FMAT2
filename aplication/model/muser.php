@@ -28,6 +28,16 @@ class muser extends core_model{
             }
         }
     }
+
+    function insertUser($firstName, $lastName, $username, $password, $email){
+        $data = array();
+        $data['NombreUsuario'] = $firstName;
+        $data['ApellidosUsuario'] = $lastName;
+        $data['NombreDespliegue'] = $username;
+        $data['Contrsena'] = $password;
+        $data['CorreoElectronico'] = $email;
+        $this->db->insert('usuario', $data);
+    }
     
     function logout(){
         session_start();

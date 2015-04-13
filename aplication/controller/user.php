@@ -13,19 +13,20 @@ class user extends core_controller {
 		$this->load_view('templates/template', $this->data);
 	}
 
-	function insert(){
+	function register(){
 		if (isset($_POST['username']) && isset($_POST['password'])) {
 			$username = $_POST['username'];
 			$password = $_POST['password'];
 			$name = $_POST['name'];
 			$lastname = $_POST['lastname'];
+			$email = $_POST['email'];
 
 			$this->load_model('muser');
-			$this->muser->insertUser($name, $lastname, $username, $password);
+			$this->muser->insertUser($name, $lastname, $username, $password, $email);
 
 			$this->redirect('user');
 		} else {
-			$this->data['content'] = $this->load_view('insert_view', array(), true);
+			$this->data['content'] = $this->load_view('register_user_view', array(), true);
 			$this->load_view('templates/template', $this->data);
 		}
 	}

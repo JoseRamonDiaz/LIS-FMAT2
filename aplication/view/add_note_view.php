@@ -1,10 +1,6 @@
-<?php
-include 'aplication/config/config.php';
-?>
-
 <h2>Llena los datos del material</h2>
             <p>
-                <form action=<?php echo 'http://'.$config['base_url'].'/note/addNote'; ?> method="post" enctype="multipart/form-data">
+                <form action=<?php $appBase.'/note/addNote'; ?> method="post" enctype="multipart/form-data">
                 <input type="radio" name="tipo" value="tarea">Tarea</input>
                 <input type="radio" name="tipo" value="examen">Examen</input>
                 <?php

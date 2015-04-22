@@ -1,11 +1,7 @@
-<?php
-include 'aplication/config/config.php';
-?>
-
-	<h1>
+    <h1>
 		Ingresa los datos de la materia
 	</h1>
-    <form method="post" action=<?php echo 'http://'.$config['base_url'].'/subject/insertSubject'; ?>>
+    <form method="post" action=<?php $appBase.'/subject/insertSubject'; ?>>
         <label for="nombre">Nombre: </label>
         <input type="text" id="nombre" name="nombre">
         <label for="semestre">Semestre: </label>

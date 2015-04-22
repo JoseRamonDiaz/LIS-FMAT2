@@ -1,11 +1,7 @@
-<?php
-include 'aplication/config/config.php';
-?>
-
 	<h1>
 		Ingresa los datos del maestro
 	</h1>
-    <form method="post" action=<?php echo 'http://'.$config['base_url'].'/teacher/insertTeacher'; ?>>
+    <form method="post" action=<?php $appBase.'/teacher/insertTeacher'; ?>>
         <label for="nombre">Nombre: </label>
         <input type="text" id="nombre" name="nombre">
         <label for="apellidos">Apellidos: </label>

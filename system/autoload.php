@@ -8,6 +8,9 @@ spl_autoload_register(
         if (file_exists(APP_BASE."/controller/$className.php")) {
             include_once APP_BASE."/controller/$className.php";
         }
+        if (file_exists(APP_BASE."/modules/controller/$className.php")) {
+            include_once APP_BASE."/modules/controller/$className.php";
+        }
         if (file_exists(APP_BASE."/model/$className.php")) {
             include_once APP_BASE."/model/$className.php";
         }

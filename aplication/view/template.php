@@ -13,7 +13,7 @@
 
 <body>
 <div class="wrap">
-		<?php include('header.php'); ?>
+        <?php Module::run('header') ?>
     <div class="wrap">
 		<div id="left">
     <!-- InstanceBeginEditable name="EditRegion" -->
@@ -24,12 +24,12 @@
     </div>
     <div id="right">
      <!-- InstanceBeginEditable name="EditRegion1" -->
-        <?php include('barralado.php'); ?>
+        <?php Module::run('barralado') ?>
         <!-- InstanceEndEditable -->
     </div>
     
     
-        <?php include('footer.php'); ?>
+        <?php Module::run('footer') ?>
         </div>
 </body>
 <!-- InstanceEnd --></html>

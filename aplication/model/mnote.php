@@ -10,6 +10,10 @@ class mnote extends core_model{
     function __construct() {
         parent::__construct();
     }
+
+    function getNotes(){
+        return $this->db->get('apuntes');
+    }
     
     function addNote($NombreApuntes, $ArchivoApuntes, $DescripcionApuntes, $Tipo, $idMaestro, $idMateria){
         $data = array();

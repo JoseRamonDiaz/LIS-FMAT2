@@ -1,7 +1,7 @@
 	<h1>
 		Registrate en el sistema
 	</h1>
-    <form method="post" action=<?php $appBase.'/user/register'; ?>>
+    <form method="post" action=<?php echo $appBase.'/user/register'; ?>>
         <label for="name" >Nombre: </label>
         <input type="text" id="name" name="name" required>
          <label for="lastname" >Apellidos: </label>

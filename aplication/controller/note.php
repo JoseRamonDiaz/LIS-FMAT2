@@ -12,6 +12,14 @@ class note extends core_controller {
         parent::__construct();
     }
 
+    function action(){
+        $this->load_model("mnote");
+        $notes = $this->mnote->getNotes();
+        foreach ($notes as $note){
+            echo "Nombre: ".$note['NombreApuntes'];
+        }
+    }
+
     function addNote() {
         if (isset($_POST['nombre']) && isset($_POST['descripcion'])) {
             $tipo = $_POST["tipo"];

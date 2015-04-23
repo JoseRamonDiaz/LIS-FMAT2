@@ -1,7 +1,7 @@
 	<h1>
 		Ingresa los datos del maestro
 	</h1>
-    <form method="post" action=<?php $appBase.'/teacher/insertTeacher'; ?>>
+    <form method="post" action=<?php echo $appBase.'/teacher/insertTeacher'; ?>>
         <label for="nombre">Nombre: </label>
         <input type="text" id="nombre" name="nombre">
         <label for="apellidos">Apellidos: </label>

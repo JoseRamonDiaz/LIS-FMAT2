@@ -1,7 +1,7 @@
     <h1>
         Ingresa los datos del enlace
     </h1>
-    <form method="post" action=<?php $appBase.'/link/addLink'; ?>>
+    <form method="post" action=<?php echo $appBase.'/link/addLink'; ?>>
         <label for="enlace">Enlace: </label>
         <input type="text" id="enlace" name="enlace">
         <?php

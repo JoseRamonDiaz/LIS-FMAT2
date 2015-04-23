@@ -12,6 +12,14 @@ class link extends core_controller {
         parent::__construct();
     }
 
+    function action(){
+        $this->load_model("mlink");
+        $links = $this->mlink->getLinks();
+        foreach ($links as $link){
+            echo "Nombre: ".$link['NombreEnlace'];
+        }
+    }
+
     function addLink(){
         if(isset($_POST['enlace'])){
             $enlace = $_POST['enlace'];

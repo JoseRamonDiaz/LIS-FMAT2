@@ -6,9 +6,13 @@
  * and open the template in the editor.
  */
 
-class mnlink extends core_model{
+class mlink extends core_model{
     function __construct() {
         parent::__construct();
+    }
+
+    function getLinks(){
+        return $this->db->get('enlaces');
     }
     
     function addLink($NombreEnlace, $Materia_idMateria){

@@ -10,7 +10,7 @@ class view {
 
 		$config = config::getInstance();
 		$database = $config->getBaseConfig();
-		$appBase = $database['base_url'];
+		$appBase = 'http://'.$database['base_url'];
 
 		if ($async) {
 			ob_start();
@@ -32,7 +32,7 @@ class view {
 
 		$config = config::getInstance();
 		$database = $config->getBaseConfig();
-		$appBase = $database['base_url'];
+		$appBase = 'http://'.$database['base_url'];
 
 		if ($async) {
 			ob_start();

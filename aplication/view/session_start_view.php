@@ -5,6 +5,6 @@
         <label for="user">Usuario: </label>
         <input type="text" id="user" name="user">
         <label for="pass">Contraseña: </label>
-        <input type="text" id="pass" name="pass">
+        <input type="password" id="pass" name="pass">
         <input type="submit" value="Ingresar">
     </form>
